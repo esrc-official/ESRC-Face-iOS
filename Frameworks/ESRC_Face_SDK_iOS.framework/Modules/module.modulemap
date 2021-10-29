@@ -1,0 +1,11 @@
+framework module ESRC_Face_SDK_iOS {
+  umbrella header "ESRC_Face_SDK_iOS.h"
+
+  export *
+  module * { export * }
+}
+
+module ESRC_Face_SDK_iOS.Swift {
+    header "ESRC_Face_SDK_iOS-Swift.h"
+    requires objc
+}

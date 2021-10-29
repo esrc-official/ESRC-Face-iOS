@@ -7,20 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C78D6CC272BACC60035BF5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6C9272BACC60035BF5A /* README.md */; };
+		4C78D6E1272BACF00035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6D5272BACEF0035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite */; };
+		4C78D6E9272BACF00035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6DE272BACEF0035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite */; };
+		4C78D6EA272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6DF272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt */; };
+		4C78D6EB272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6E0272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel */; };
+		4C78D6F7272BCB6C0035BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6F5272BCB6C0035BF5A /* Main.storyboard */; };
+		4C78D6FA272BDCFA0035BF5A /* ESRC_Face_SDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C78D6F8272BDCF00035BF5A /* ESRC_Face_SDK_iOS.framework */; };
+		4C78D6FB272BDCFA0035BF5A /* ESRC_Face_SDK_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C78D6F8272BDCF00035BF5A /* ESRC_Face_SDK_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4C86BDD8272B96C8000BC2C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86BDD7272B96C8000BC2C5 /* AppDelegate.swift */; };
 		4C86BDDA272B96C8000BC2C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86BDD9272B96C8000BC2C5 /* SceneDelegate.swift */; };
 		4C86BDDC272B96C8000BC2C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86BDDB272B96C8000BC2C5 /* ViewController.swift */; };
-		4C86BDDF272B96C8000BC2C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C86BDDD272B96C8000BC2C5 /* Main.storyboard */; };
 		4C86BDE1272B96CB000BC2C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C86BDE0272B96CB000BC2C5 /* Assets.xcassets */; };
 		4C86BDE4272B96CB000BC2C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C86BDE2272B96CB000BC2C5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C78D6EF272BAE090035BF5A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C78D6FB272BDCFA0035BF5A /* ESRC_Face_SDK_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4C78D6C9272BACC60035BF5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4C78D6D5272BACEF0035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_mobilenet_facial_landmark_detection.tflite; sourceTree = "<group>"; };
+		4C78D6DE272BACEF0035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_mobilenet_facial_expression_recognition.tflite; sourceTree = "<group>"; };
+		4C78D6DF272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = esrc_ssd_mobilenet_face_detection.prototxt; sourceTree = "<group>"; };
+		4C78D6E0272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_ssd_mobilenet_face_detection.caffemodel; sourceTree = "<group>"; };
+		4C78D6F6272BCB6C0035BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C78D6F8272BDCF00035BF5A /* ESRC_Face_SDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ESRC_Face_SDK_iOS.framework; sourceTree = "<group>"; };
 		4C86BDD4272B96C8000BC2C5 /* ESRC-Face-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESRC-Face-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C86BDD7272B96C8000BC2C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C86BDD9272B96C8000BC2C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C86BDDB272B96C8000BC2C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C86BDDE272B96C8000BC2C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C86BDE0272B96CB000BC2C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C86BDE3272B96CB000BC2C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C86BDE5272B96CB000BC2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,15 +58,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C78D6FA272BDCFA0035BF5A /* ESRC_Face_SDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C78D6CA272BACC60035BF5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C78D6F8272BDCF00035BF5A /* ESRC_Face_SDK_iOS.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C78D6D4272BACEF0035BF5A /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				4C78D6D5272BACEF0035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite */,
+				4C78D6DE272BACEF0035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite */,
+				4C78D6DF272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt */,
+				4C78D6E0272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		4C86BDCB272B96C8000BC2C5 = {
 			isa = PBXGroup;
 			children = (
+				4C78D6C9272BACC60035BF5A /* README.md */,
+				4C78D6CA272BACC60035BF5A /* Frameworks */,
 				4C86BDD6272B96C8000BC2C5 /* ESRC-Face-iOS */,
 				4C86BDD5272B96C8000BC2C5 /* Products */,
 			);
@@ -56,12 +105,13 @@
 		4C86BDD6272B96C8000BC2C5 /* ESRC-Face-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C78D6D4272BACEF0035BF5A /* assets */,
 				4C86BDD7272B96C8000BC2C5 /* AppDelegate.swift */,
 				4C86BDD9272B96C8000BC2C5 /* SceneDelegate.swift */,
 				4C86BDDB272B96C8000BC2C5 /* ViewController.swift */,
-				4C86BDDD272B96C8000BC2C5 /* Main.storyboard */,
-				4C86BDE0272B96CB000BC2C5 /* Assets.xcassets */,
+				4C78D6F5272BCB6C0035BF5A /* Main.storyboard */,
 				4C86BDE2272B96CB000BC2C5 /* LaunchScreen.storyboard */,
+				4C86BDE0272B96CB000BC2C5 /* Assets.xcassets */,
 				4C86BDE5272B96CB000BC2C5 /* Info.plist */,
 			);
 			path = "ESRC-Face-iOS";
@@ -77,6 +127,7 @@
 				4C86BDD0272B96C8000BC2C5 /* Sources */,
 				4C86BDD1272B96C8000BC2C5 /* Frameworks */,
 				4C86BDD2272B96C8000BC2C5 /* Resources */,
+				4C78D6EF272BAE090035BF5A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,7 +177,12 @@
 			files = (
 				4C86BDE4272B96CB000BC2C5 /* LaunchScreen.storyboard in Resources */,
 				4C86BDE1272B96CB000BC2C5 /* Assets.xcassets in Resources */,
-				4C86BDDF272B96C8000BC2C5 /* Main.storyboard in Resources */,
+				4C78D6CC272BACC60035BF5A /* README.md in Resources */,
+				4C78D6EB272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel in Resources */,
+				4C78D6F7272BCB6C0035BF5A /* Main.storyboard in Resources */,
+				4C78D6E9272BACF00035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite in Resources */,
+				4C78D6EA272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt in Resources */,
+				4C78D6E1272BACF00035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,10 +202,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4C86BDDD272B96C8000BC2C5 /* Main.storyboard */ = {
+		4C78D6F5272BCB6C0035BF5A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C86BDDE272B96C8000BC2C5 /* Base */,
+				4C78D6F6272BCB6C0035BF5A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -216,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,12 +344,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8H9W99437;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "ESRC-Face-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esrc.face.ios.ESRC-Face-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esrc.face.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +367,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8H9W99437;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "ESRC-Face-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.esrc.face.ios.ESRC-Face-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esrc.face.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
