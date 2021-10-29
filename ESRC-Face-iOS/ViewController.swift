@@ -13,7 +13,7 @@ import ESRC_Face_SDK_iOS
 class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     // ESRC variables
-    let APP_ID: String = "CD57685A-15AC-5814-D517-1EF321BA39C5"  // Applocation ID.
+    let APP_ID: String = ""  // Applocation ID.
     let ENABLE_DRAW: Bool = true;  // Enablement of visualization.
     var frame: UIImage? = nil
     var face: ESRCFace? = nil
@@ -260,85 +260,4 @@ extension ViewController: ESRCLicenseHandler, ESRCHandler {
         facial_exp_val_text.isHidden = false
         facial_exp_val_text.text = String(facialExpression.getEmotionStr())
     }
-    
-//    func didChangedProgressRatioOnRemoteHR(progressRatio: Double) {
-//        print("didChangedProgressRatioOnRemoteHR: " + (String)(progressRatio))
-//
-//        if (hr_indicator.isAnimating == true) {
-//            hr_indicator.stopAnimating()
-//        }
-//
-//        // display progress bar
-//        if(progressRatio < 100){
-//            hr_circularView.isHidden = false
-//            hr_circularView.progressAnimation(ratio: progressRatio, oneStep: 0.01)
-//        }
-//    }
-//
-//    func onEstimatedRemoteHR(remoteHR: ESRCRemoteHR) {
-//        print("onEstimatedRemoteHR: " + remoteHR.toString())
-//
-//        // Hide circular view and show text
-//        hr_circularView.isHidden = true
-//        hr_val_text.isHidden = false
-//        hr_unit_text.isHidden = false
-//
-//        // Set HR value
-//        hr_val_text.text = String(format: "%.0f", remoteHR.getHR())
-//    }
-//
-//    func didChangedProgressRatioOnHRV(progressRatio: Double) {
-//        print("didChangedProgressRatioOnHRV: " + (String)(progressRatio))
-//
-//        // Stop indicator animation
-//        if (hrv_sdnn_indicator.isAnimating == true) {
-//            hrv_sdnn_indicator.stopAnimating()
-//            hrv_rmssd_indicator.stopAnimating()
-//            hrv_lnlf_indicator.stopAnimating()
-//            hrv_lnhf_indicator.stopAnimating()
-//            ans_balance_indicator.stopAnimating()
-//        }
-//
-//        // Display progress bar
-//        if(progressRatio < 100){
-//            hrv_sdnn_circularView.isHidden = false
-//            hrv_rmssd_circularView.isHidden = false
-//            hrv_lnlf_circularView.isHidden = false
-//            hrv_lnhf_circularView.isHidden = false
-//            ans_balance_circularView.isHidden = false
-//            hrv_sdnn_circularView.progressAnimation(ratio: progressRatio, oneStep: 0.01666)
-//            hrv_rmssd_circularView.progressAnimation(ratio: progressRatio, oneStep: 0.01666)
-//            hrv_lnlf_circularView.progressAnimation(ratio: progressRatio, oneStep: 0.01666)
-//            hrv_lnhf_circularView.progressAnimation(ratio: progressRatio, oneStep: 0.01666)
-//            ans_balance_circularView.progressAnimation(ratio: progressRatio, oneStep: 0.01666)
-//        }
-//    }
-//
-//    func onAnalyzedHRV(hrv: ESRCHRV) {
-//        print("onAnalyzedHRV: " + hrv.toString())
-//
-//        // Hide circular view and show text
-//        hrv_sdnn_circularView.isHidden = true
-//        hrv_sdnn_val_text.isHidden = false
-//        hrv_sdnn_unit_text.isHidden = false
-//        hrv_rmssd_circularView.isHidden = true
-//        hrv_rmssd_val_text.isHidden = false
-//        hrv_rmssd_unit_text.isHidden = false
-//        hrv_lnlf_circularView.isHidden = true
-//        hrv_lnlf_val_text.isHidden = false
-//        hrv_lnlf_unit_text.isHidden = false
-//        hrv_lnhf_circularView.isHidden = true
-//        hrv_lnhf_val_text.isHidden = false
-//        hrv_lnhf_unit_text.isHidden = false
-//        ans_balance_circularView.isHidden = true
-//        ans_balance_val_text.isHidden = false
-//        ans_balance_unit_text.isHidden = false
-//
-//        // Set HRV values
-//        hrv_sdnn_val_text.text = String(format: "%.2f", hrv.getSdnn())
-//        hrv_rmssd_val_text.text = String(format: "%.2f", hrv.getRmssd())
-//        hrv_lnlf_val_text.text = String(format: "%.2f", hrv.getLnLf())
-//        hrv_lnhf_val_text.text = String(format: "%.2f", hrv.getLnHf())
-//        ans_balance_val_text.text = String(format: "%.2f", hrv.getLfHf())
-//    }
 }
