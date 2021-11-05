@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char ESRC_Face_SDK_iOSVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <ESRC_Face_SDK_iOS/PublicHeader.h>
 
 
+#import "EsrcSDK_MeasureEnv_Wrapper.h"
 #import "EsrcSDK_Face_Wrapper.h"
