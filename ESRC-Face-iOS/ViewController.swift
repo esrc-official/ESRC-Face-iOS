@@ -14,7 +14,7 @@ class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDel
 
     // ESRC variables
     let APP_ID: String = ""  // Applocation ID.
-    let ENABLE_DRAW: Bool = true;  // Whether visualize result or not.
+    let ENABLE_DRAW: Bool = false;  // Whether visualize result or not.
     var property: ESRCProperty = ESRCProperty(
         enableMeasureEnv: true,  // Whether analyze measurement environment or not.
         enableFace: true,  // Whether detect face or not.
