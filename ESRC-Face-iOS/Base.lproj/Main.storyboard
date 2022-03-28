@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,17 +41,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-wI-VD5" userLabel="under_line_container_view">
                                         <rect key="frame" x="0.0" y="125" width="414" height="110"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0n-Jy-rMa" userLabel="facial_exp_container_view">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0n-Jy-rMa" userLabel="basic_facial_exp_container_view">
                                                 <rect key="frame" x="16" y="4" width="122" height="106"/>
                                                 <subviews>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Facial Exp." textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="w12-b7-Ryo" userLabel="facial_exp_title_text">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Facial Exp. (7T)" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="w12-b7-Ryo" userLabel="basic_facial_exp_title_text">
                                                         <rect key="frame" x="17" y="5" width="88" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Neutral" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-V4-Ah1" userLabel="facial_exp_val_text">
+                                                    <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Neutral" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z6w-V4-Ah1" userLabel="basic_facial_exp_val_text">
                                                         <rect key="frame" x="0.0" y="38" width="122" height="64"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,18 +61,19 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-rh-FFv" userLabel="head_pose_container_view">
-                                                <rect key="frame" x="146" y="4" width="122" height="106"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7p-8M-ggs" userLabel="valence_facial_exp_container_view">
+                                                <rect key="frame" x="146" y="2" width="122" height="106"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Head Pose" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="rOj-07-3DJ" userLabel="head_pose_title_text">
-                                                        <rect key="frame" x="18" y="5" width="86" height="21"/>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Facial Exp. (3T)" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9dK-at-yoK" userLabel="valence_facial_exp_title_text">
+                                                        <rect key="frame" x="17" y="5" width="88" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Coming Soon" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xc3-RC-DVX" userLabel="head_pose_val_text">
-                                                        <rect key="frame" x="0.0" y="34" width="122" height="64"/>
+                                                    <textView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Neutral" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-qO-zah" userLabel="valence_facial_exp_val_text">
+                                                        <rect key="frame" x="0.0" y="38" width="122" height="64"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -81,7 +82,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B39-dd-syC" userLabel="attention_container_view">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B39-dd-syC" userLabel="attention_container_view">
                                                 <rect key="frame" x="276" y="4" width="122" height="106"/>
                                                 <subviews>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Attention" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Mky-v3-T2b" userLabel="attention_title_text">
@@ -105,18 +106,13 @@
                                         <color key="backgroundColor" red="1" green="0.1978229155" blue="0.18110891109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="B39-dd-syC" secondAttribute="bottom" id="4Mb-eD-pBx"/>
-                                            <constraint firstItem="B39-dd-syC" firstAttribute="leading" secondItem="0Ls-rh-FFv" secondAttribute="trailing" constant="8" id="57U-3q-q7a"/>
                                             <constraint firstItem="B39-dd-syC" firstAttribute="width" secondItem="l0n-Jy-rMa" secondAttribute="width" id="7mX-ma-vyi"/>
-                                            <constraint firstItem="0Ls-rh-FFv" firstAttribute="leading" secondItem="l0n-Jy-rMa" secondAttribute="trailing" constant="8" id="9Tg-bg-Iqq"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="B39-dd-syC" secondAttribute="trailing" constant="8" id="DaG-9r-QHk"/>
                                             <constraint firstItem="B39-dd-syC" firstAttribute="top" secondItem="Drt-wI-VD5" secondAttribute="top" constant="4" id="LVu-dx-iid"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Ls-rh-FFv" secondAttribute="bottom" id="MQz-OZ-qIg"/>
                                             <constraint firstAttribute="bottom" secondItem="l0n-Jy-rMa" secondAttribute="bottom" id="SNp-MA-Ama"/>
                                             <constraint firstItem="l0n-Jy-rMa" firstAttribute="top" secondItem="Drt-wI-VD5" secondAttribute="top" constant="4" id="anC-09-gsA"/>
                                             <constraint firstItem="l0n-Jy-rMa" firstAttribute="leading" secondItem="Drt-wI-VD5" secondAttribute="leadingMargin" constant="8" id="cW3-ZV-X8e"/>
-                                            <constraint firstItem="0Ls-rh-FFv" firstAttribute="top" secondItem="Drt-wI-VD5" secondAttribute="top" constant="4" id="okE-1R-U0F"/>
                                             <constraint firstAttribute="height" constant="110" id="pqz-NY-yLF"/>
-                                            <constraint firstItem="0Ls-rh-FFv" firstAttribute="width" secondItem="l0n-Jy-rMa" secondAttribute="width" id="tIZ-aZ-ejg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -154,17 +150,17 @@
                         <outlet property="attention_container" destination="B39-dd-syC" id="qhj-n6-Jbc"/>
                         <outlet property="attention_title_text" destination="Mky-v3-T2b" id="R5l-eC-STI"/>
                         <outlet property="attention_val_text" destination="l1r-Ii-i3q" id="kfs-xp-gqT"/>
+                        <outlet property="basic_facial_exp_container" destination="l0n-Jy-rMa" id="gyC-Tm-zZR"/>
+                        <outlet property="basic_facial_exp_title_text" destination="w12-b7-Ryo" id="IPc-Cr-MDG"/>
+                        <outlet property="basic_facial_exp_val_text" destination="z6w-V4-Ah1" id="ltZ-YI-Zki"/>
                         <outlet property="facebox_image" destination="3y4-x4-Ih0" id="Sft-Rm-NFA"/>
-                        <outlet property="facial_exp_container" destination="l0n-Jy-rMa" id="bK7-V7-3aC"/>
-                        <outlet property="facial_exp_title_text" destination="w12-b7-Ryo" id="TrT-CF-PAu"/>
-                        <outlet property="facial_exp_val_text" destination="z6w-V4-Ah1" id="qwu-LN-De8"/>
-                        <outlet property="head_pose_container" destination="0Ls-rh-FFv" id="JHM-gE-u7V"/>
-                        <outlet property="head_pose_title_text" destination="rOj-07-3DJ" id="Gih-nV-VLo"/>
-                        <outlet property="head_pose_val_text" destination="Xc3-RC-DVX" id="DBM-f0-XeB"/>
                         <outlet property="info_container" destination="8cV-z0-zZC" id="jaA-QH-ZMq"/>
                         <outlet property="preview" destination="JgL-34-B2A" id="6Hs-fL-Dif"/>
                         <outlet property="under_line_container" destination="Drt-wI-VD5" id="OcK-Iq-Qhx"/>
                         <outlet property="upper_line_container" destination="Rza-sd-nc0" id="hZk-ZM-nDp"/>
+                        <outlet property="valence_facial_exp_container" destination="f7p-8M-ggs" id="6zL-mL-x5w"/>
+                        <outlet property="valence_facial_exp_title_text" destination="9dK-at-yoK" id="nId-fK-Wob"/>
+                        <outlet property="valence_facial_exp_val_text" destination="HdE-qO-zah" id="N1y-UZ-JzT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -22,9 +22,13 @@
 + (bool) EsrcSDK_Face_ReleaseFacialLandmarkDetectionTask;
 + (void) EsrcSDK_Face_FeedFacialLandmarkDetectionTask: (UIImage *) face param2: (float *) facialLandmark;
 
-+ (bool) EsrcSDK_Face_InitFacialExpressionRecognitionTask: (NSString *) tflitePath;
-+ (bool) EsrcSDK_Face_ReleaseFacialExpressionRecognitionTask;
-+ (void) EsrcSDK_Face_FeedFacialExpressionRecognitionTask: (UIImage *) face param2: (float *) emotionProbs param3: (int *) emotion;
++ (bool) EsrcSDK_Face_InitBasicFacialExpressionRecognitionTask: (NSString *) tflitePath;
++ (bool) EsrcSDK_Face_ReleaseBasicFacialExpressionRecognitionTask;
++ (void) EsrcSDK_Face_FeedBasicFacialExpressionRecognitionTask: (UIImage *) face param2: (float *) emotionProbs param3: (int *) emotion;
+
++ (bool) EsrcSDK_Face_InitValenceFacialExpressionRecognitionTask: (NSString *) tflitePath;
++ (bool) EsrcSDK_Face_ReleaseValenceFacialExpressionRecognitionTask;
++ (void) EsrcSDK_Face_FeedValenceFacialExpressionRecognitionTask: (UIImage *) face param2: (float *) emotionProbs param3: (int *) emotion;
 
 
 @end

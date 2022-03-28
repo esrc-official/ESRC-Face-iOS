@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4C78D6CC272BACC60035BF5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6C9272BACC60035BF5A /* README.md */; };
 		4C78D6E1272BACF00035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6D5272BACEF0035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite */; };
-		4C78D6E9272BACF00035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6DE272BACEF0035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite */; };
 		4C78D6EA272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6DF272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt */; };
 		4C78D6EB272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6E0272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel */; };
 		4C78D6F7272BCB6C0035BF5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C78D6F5272BCB6C0035BF5A /* Main.storyboard */; };
@@ -20,6 +19,8 @@
 		4C86BDDC272B96C8000BC2C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86BDDB272B96C8000BC2C5 /* ViewController.swift */; };
 		4C86BDE1272B96CB000BC2C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C86BDE0272B96CB000BC2C5 /* Assets.xcassets */; };
 		4C86BDE4272B96CB000BC2C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C86BDE2272B96CB000BC2C5 /* LaunchScreen.storyboard */; };
+		B3B0DA7827F1798100701F7F /* esrc_mobilenet_basic_facial_expression_recognition.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B3B0DA7727F1798100701F7F /* esrc_mobilenet_basic_facial_expression_recognition.tflite */; };
+		B3B0DA7A27F1798600701F7F /* esrc_mobilenet_valence_facial_expression_recognition.tflite in Resources */ = {isa = PBXBuildFile; fileRef = B3B0DA7927F1798600701F7F /* esrc_mobilenet_valence_facial_expression_recognition.tflite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,7 +40,6 @@
 /* Begin PBXFileReference section */
 		4C78D6C9272BACC60035BF5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C78D6D5272BACEF0035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_mobilenet_facial_landmark_detection.tflite; sourceTree = "<group>"; };
-		4C78D6DE272BACEF0035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_mobilenet_facial_expression_recognition.tflite; sourceTree = "<group>"; };
 		4C78D6DF272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = esrc_ssd_mobilenet_face_detection.prototxt; sourceTree = "<group>"; };
 		4C78D6E0272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_ssd_mobilenet_face_detection.caffemodel; sourceTree = "<group>"; };
 		4C78D6F6272BCB6C0035BF5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		4C86BDE0272B96CB000BC2C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C86BDE3272B96CB000BC2C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C86BDE5272B96CB000BC2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B0DA7727F1798100701F7F /* esrc_mobilenet_basic_facial_expression_recognition.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_mobilenet_basic_facial_expression_recognition.tflite; sourceTree = "<group>"; };
+		B3B0DA7927F1798600701F7F /* esrc_mobilenet_valence_facial_expression_recognition.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = esrc_mobilenet_valence_facial_expression_recognition.tflite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +78,9 @@
 		4C78D6D4272BACEF0035BF5A /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				B3B0DA7927F1798600701F7F /* esrc_mobilenet_valence_facial_expression_recognition.tflite */,
 				4C78D6D5272BACEF0035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite */,
-				4C78D6DE272BACEF0035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite */,
+				B3B0DA7727F1798100701F7F /* esrc_mobilenet_basic_facial_expression_recognition.tflite */,
 				4C78D6DF272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt */,
 				4C78D6E0272BACEF0035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel */,
 			);
@@ -176,11 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C86BDE4272B96CB000BC2C5 /* LaunchScreen.storyboard in Resources */,
+				B3B0DA7827F1798100701F7F /* esrc_mobilenet_basic_facial_expression_recognition.tflite in Resources */,
 				4C86BDE1272B96CB000BC2C5 /* Assets.xcassets in Resources */,
+				B3B0DA7A27F1798600701F7F /* esrc_mobilenet_valence_facial_expression_recognition.tflite in Resources */,
 				4C78D6CC272BACC60035BF5A /* README.md in Resources */,
 				4C78D6EB272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.caffemodel in Resources */,
 				4C78D6F7272BCB6C0035BF5A /* Main.storyboard in Resources */,
-				4C78D6E9272BACF00035BF5A /* esrc_mobilenet_facial_expression_recognition.tflite in Resources */,
 				4C78D6EA272BACF00035BF5A /* esrc_ssd_mobilenet_face_detection.prototxt in Resources */,
 				4C78D6E1272BACF00035BF5A /* esrc_mobilenet_facial_landmark_detection.tflite in Resources */,
 			);
@@ -349,7 +353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BITCODE_GENERATION_MODE = markerin;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 243;
+				CURRENT_PROJECT_VERSION = 244;
 				DEVELOPMENT_TEAM = MHUU2ZBJ99;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -361,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.3;
+				MARKETING_VERSION = 2.4.4;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esrc.face.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -377,7 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 243;
+				CURRENT_PROJECT_VERSION = 244;
 				DEVELOPMENT_TEAM = MHUU2ZBJ99;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -389,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.3;
+				MARKETING_VERSION = 2.4.4;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esrc.face.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -20,7 +20,8 @@ class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDel
         enableFace: true,  // Whether detect face or not.
         enableFacialLandmark: true,  // Whether detect facial landmark or not. If enableFace is false, it is also automatically set to false.
         enableFacialActionUnit: true,  // Whether analyze facial action unit or not. If enableFace or enableFacialLandmark is false, it is also automatically set to false.
-        enableFacialExpression: true);  // Whether recognize facial expression or not. If enableFace is false, it is also automatically set to false.
+        enableBasicFacialExpression: true,  // Whether recognize basic facial expression or not. If enableFace is false, it is also automatically set to false.
+        enableValenceFacialExpression: true)  // Whether recognize valence facial expression or not. If enableFace is false, it is also automatically set to false.
     var frame: UIImage? = nil
     var face: ESRCFace? = nil
     var facialLandmark: ESRCFacialLandmark? = nil
@@ -34,22 +35,23 @@ class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDel
     
     // Timer variables
     var timer: Timer?
+    var licenseTimer: Timer?
     
     // Layout variables
     @IBOutlet weak var facebox_image: UIImageView!
     @IBOutlet weak var info_container: UIView!
     @IBOutlet weak var upper_line_container: UIView!
     @IBOutlet weak var under_line_container: UIView!
-    @IBOutlet weak var facial_exp_container: UIView!
-    @IBOutlet weak var head_pose_container: UIView!
+    @IBOutlet weak var basic_facial_exp_container: UIView!
+    @IBOutlet weak var valence_facial_exp_container: UIView!
     @IBOutlet weak var attention_container: UIView!
      
-    @IBOutlet weak var facial_exp_title_text: UITextField!
-    @IBOutlet weak var facial_exp_val_text: UITextView!
+    @IBOutlet weak var basic_facial_exp_title_text: UITextField!
+    @IBOutlet weak var basic_facial_exp_val_text: UITextView!
 
-    @IBOutlet weak var head_pose_title_text: UITextField!
-    @IBOutlet weak var head_pose_val_text: UITextView!
-    
+    @IBOutlet weak var valence_facial_exp_title_text: UITextField!
+    @IBOutlet weak var valence_facial_exp_val_text: UITextView!
+
     @IBOutlet weak var attention_title_text: UITextField!
     @IBOutlet weak var attention_val_text: UITextView!
     
@@ -65,12 +67,11 @@ class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDel
         // Initialize container
         info_container.backgroundColor = UIColor(white: 1, alpha: 0.0)
         under_line_container.backgroundColor = UIColor(white: 1, alpha: 0.0)
-        facial_exp_container.layer.cornerRadius = 10
-        head_pose_container.layer.cornerRadius = 10
+        basic_facial_exp_container.layer.cornerRadius = 10
+        valence_facial_exp_container.layer.cornerRadius = 10
         attention_container.layer.cornerRadius = 10
         
         // Show coming soon text
-        head_pose_val_text.isHidden = false
         attention_val_text.isHidden = false
     }
     
@@ -132,29 +133,19 @@ class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDel
         }
         
         // Initialize ESRC
-        if(!ESRC.initWithApplicationId(appId: APP_ID, licenseHandler: self)) {
+        if (!ESRC.initWithApplicationId(appId: APP_ID, licenseHandler: self)) {
             print("ESRC init is failed.")
-        } else {
-            // Start ESRC
-            if(!ESRC.start(property: self.property, handler: self)) {
-                print("ESRC start is failed.")
-            }
-            
-            // Start timer (10 fps)
-            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                // Feed ESRC
-                if(self.frame != nil) {
-                    ESRC.feed(frame: self.frame!)
-                }
-            }
         }
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         // Stop timer
         self.timer?.invalidate()
+        
+        // Stop license timer
+        self.licenseTimer?.invalidate()
         
         // Release ESRC
         if(!ESRC.stop()) {
@@ -163,6 +154,41 @@ class ViewController:  UIViewController, AVCaptureVideoDataOutputSampleBufferDel
 
         // Stop the session on the background thread
         self.captureSession.stopRunning()
+    }
+    
+    func startApp() {
+        print("Start App")
+        // Start ESRC
+        if (!ESRC.start(property: self.property, handler: self)) {
+            print("ESRC start is failed.")
+        }
+        
+        print("Start timer")
+        // Start timer (10 fps)
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            // Feed ESRC
+            if(self.frame != nil) {
+                print("Feed ESRC")
+                ESRC.feed(frame: self.frame!)
+            }
+        }
+        
+        print("Start license timer")
+        // Start license timer (after 80s)
+        self.licenseTimer = Timer.scheduledTimer(withTimeInterval: 80, repeats: false) { timer in
+            // Show alert dialog
+            let alert = UIAlertController(title: "Alert", message: "If you want to use the ESRC SDK, please visit the homepage: https://www.esrc.co.kr", preferredStyle: .alert)
+            let alertPositiveButton = UIAlertAction(title: "OK", style: .default) { action in
+                // Nothing
+            }
+            alert.addAction(alertPositiveButton)
+            self.present(alert, animated: true, completion: nil)
+            
+            // Close app
+            let closeTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
+                exit(0)
+            }
+        }
     }
     
     func setupPreview() {
@@ -223,6 +249,9 @@ extension ViewController: ESRCLicenseHandler, ESRCHandler {
     
     func onValidatedLicense() {
         print("onValidatedLicense.")
+        
+        // Start App
+        startApp()
     }
     
     func onInvalidatedLicense() {
@@ -240,7 +269,8 @@ extension ViewController: ESRCLicenseHandler, ESRCHandler {
         facebox_image.layer.borderWidth = 8
         facebox_image.layer.borderColor = UIColor(red: 0.92, green: 0.0, blue: 0.55, alpha: 1.0).cgColor
         
-        facial_exp_val_text.isHidden = false
+        basic_facial_exp_val_text.isHidden = false
+        valence_facial_exp_val_text.isHidden = false
     }
     
     func onNotDetectedFace() {
@@ -251,7 +281,8 @@ extension ViewController: ESRCLicenseHandler, ESRCHandler {
         facebox_image.layer.borderWidth = 4
         facebox_image.layer.borderColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1.0).cgColor
         
-        facial_exp_val_text.isHidden = true
+        basic_facial_exp_val_text.isHidden = true
+        valence_facial_exp_val_text.isHidden = true
     }
     
     func onDetectedFacialLandmark(facialLandmark: ESRCFacialLandmark) {
@@ -263,11 +294,19 @@ extension ViewController: ESRCLicenseHandler, ESRCHandler {
         print("onAnalyzedFacialActionUnit: " + facialActionUnit.toString())
     }
    
-    func onRecognizedFacialExpression(facialExpression: ESRCFacialExpression) {
-        print("onRecognizedFacialExpression: " + facialExpression.toString())
+    func onRecognizedBasicFacialExpression(facialExpression: ESRCBasicFacialExpression) {
+        print("onRecognizedBasicFacialExpression: " + facialExpression.toString())
         
-        //facial_exp_image_view.isHidden = false
-        facial_exp_val_text.isHidden = false
-        facial_exp_val_text.text = String(facialExpression.getEmotionStr())
+        // Set basic facial expression
+        basic_facial_exp_val_text.isHidden = false
+        basic_facial_exp_val_text.text = String(facialExpression.getEmotionStr())
+    }
+    
+    func onRecognizedValenceFacialExpression(facialExpression: ESRCValenceFacialExpression) {
+        print("onRecognizedValenceFacialExpression: " + facialExpression.toString())
+        
+        // Set valence facial expression
+        valence_facial_exp_val_text.isHidden = false
+        valence_facial_exp_val_text.text = String(facialExpression.getEmotionStr())
     }
 }
