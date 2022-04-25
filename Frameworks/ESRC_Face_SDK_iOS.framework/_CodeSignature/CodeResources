@@ -10,31 +10,31 @@
 		</data>
 		<key>Headers/ESRC_Face_SDK_iOS.h</key>
 		<data>
-		dbHbtFBSCjjrlU/bt3LQb5laB7g=
+		+8dXnYaDBhJ06PJ6tU+SLhxaR8I=
 		</data>
 		<key>Headers/EsrcSDK_Face_Wrapper.h</key>
 		<data>
-		nWcf7SqK88loe2aOlfg8mHHncCI=
+		PDgleE7CbP2XIXFNVnP3qFe7wDs=
 		</data>
 		<key>Headers/EsrcSDK_MeasureEnv_Wrapper.h</key>
 		<data>
-		FyE7mZA7suE4csclbxo/UcvsQqI=
+		wg6aX1Fc/vZBjbXb5LNXStIELRo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		D2Np+z/wj6p7RXO6ATx3XZz+TLw=
+		vZbTftWMusp65/1x7NY9/+2Qw98=
 		</data>
 		<key>Modules/ESRC_Face_SDK_iOS.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		Ip25wZIRqdwkYQK/cpDsALkn5Ng=
+		11+jHIaywARjRZFeJPdst1VHsaQ=
 		</data>
 		<key>Modules/ESRC_Face_SDK_iOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		yz3elSVfjPjljEokaCYcZGFdOxs=
+		+Z/RPl8SZWBevo7SCeCmYGXYrCU=
 		</data>
 		<key>Modules/ESRC_Face_SDK_iOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		0XBYRuJMeKfHLiXzvtCB5sUGCIU=
+		UXqOh0AHsx7sccBX2r13slBEZM0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,42 +74,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lAZ5U70i8hbuAuwTIrDdyIewHKO5+9s14soNEWOL7ao=
+			5CokHT+U5bA9tCWv0X/98+W1ZvZSuSUrqb5d9ZC9SnI=
 			</data>
 		</dict>
 		<key>Headers/EsrcSDK_Face_Wrapper.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/IQyouAIXqQFgw8UhlvSIgwLhRa8Vphk1VIcBl4oPGI=
+			BakN8wn+5BpZ7RXgM3nytF3yDQIqY/BM3RA/XIPDpYI=
 			</data>
 		</dict>
 		<key>Headers/EsrcSDK_MeasureEnv_Wrapper.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			l8TWBvL334npbr3pJsI+4F3FfHJNZcDphwNvLlktvJM=
+			2o5JgcOieuJ4TlTE2WQG433auv69rEtFkaLnfU2ttNA=
 			</data>
 		</dict>
 		<key>Modules/ESRC_Face_SDK_iOS.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OREUr0ff2gCs4yLq59BECiOzInpOpaHwwAoYWtCzRmE=
+			Enzf+zRIhj6tQZ1F6RXBINeMURAHyUMeI7H2mzldh5U=
 			</data>
 		</dict>
 		<key>Modules/ESRC_Face_SDK_iOS.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A0HaXbtHeUiitvk7bTwbsOy/3nF+N/RuASDtH3uyRCU=
+			KXyb/7by5jEYNVNN68wdXTxtoxthRBecioRJfHY/EGc=
 			</data>
 		</dict>
 		<key>Modules/ESRC_Face_SDK_iOS.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y2ToOjpBjbl5pbmZ5fJ2y98418AAxw9MBkKkx80/zls=
+			R/RRLsx9NVPKs1Hg1k+gedUUG/C/bYcRfabiuWkUyTU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

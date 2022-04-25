@@ -264,25 +264,26 @@ extension ViewController: ESRCLicenseHandler, ESRCHandler {
     
     func onDetectedFace(face: ESRCFace) {
         print("onDetectedFace: " + face.toString())
-        self.face = face
         
-        facebox_image.layer.borderWidth = 8
-        facebox_image.layer.borderColor = UIColor(red: 0.92, green: 0.0, blue: 0.55, alpha: 1.0).cgColor
-        
-        basic_facial_exp_val_text.isHidden = false
-        valence_facial_exp_val_text.isHidden = false
-    }
-    
-    func onNotDetectedFace() {
-        print("onNotDetectedFace")
-        self.face = nil
-        self.facialLandmark = nil
-     
-        facebox_image.layer.borderWidth = 4
-        facebox_image.layer.borderColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1.0).cgColor
-        
-        basic_facial_exp_val_text.isHidden = true
-        valence_facial_exp_val_text.isHidden = true
+        // Whether face is detected or not
+        if (face.getIsDetect()) {  // If face is detected
+            self.face = face
+            
+            facebox_image.layer.borderWidth = 8
+            facebox_image.layer.borderColor = UIColor(red: 0.92, green: 0.0, blue: 0.55, alpha: 1.0).cgColor
+            
+            basic_facial_exp_val_text.isHidden = false
+            valence_facial_exp_val_text.isHidden = false
+        } else {  // If face is not detected
+            self.face = nil
+            self.facialLandmark = nil
+         
+            facebox_image.layer.borderWidth = 4
+            facebox_image.layer.borderColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1.0).cgColor
+            
+            basic_facial_exp_val_text.isHidden = true
+            valence_facial_exp_val_text.isHidden = true
+        }
     }
     
     func onDetectedFacialLandmark(facialLandmark: ESRCFacialLandmark) {

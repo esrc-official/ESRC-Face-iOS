@@ -12,7 +12,7 @@
 
 ## Installation
 
-To use our iOS samples, you should first install [ESRC Face SDK for iOS](https://github.com/esrc-official/ESRC-Face-SDK-iOS) 2.4.5 or higher on your system and should be received License Key by requesting by our email: **esrc@esrc.co.kr** <br /> 
+To use our iOS samples, you should first install [ESRC Face SDK for iOS](https://github.com/esrc-official/ESRC-Face-SDK-iOS) 2.4.6 or higher on your system and should be received License Key by requesting by our email: **esrc@esrc.co.kr** <br /> 
 
 ## Before getting started
 
@@ -58,7 +58,8 @@ ESRC.start(
         enableFace: true,  // Whether detect face or not.
         enableFacialLandmark: true,  // Whether detect facial landmark or not. If enableFace is false, it is also automatically set to false.
         enableFacialActionUnit: true,  // Whether analyze facial action unit or not. If enableFace or enableFacialLandmark is false, it is also automatically set to false.
-        enableFacialExpression: true),  // Whether recognize facial expression or not. If enableFace is false, it is also automatically set to false.
+        enableBasicFacialExpression: true,  // Whether recognize basic facial expression or not. If enableFace is false, it is also automatically set to false.
+        enableValenceFacialExpression: true),  // Whether recognize valence facial expression or not. If enableFace is false, it is also automatically set to false.
     handler: ESRCHandler() {
         func onDetectedFace(face: ESRCFace) {
             // The face is detected.
@@ -69,11 +70,11 @@ ESRC.start(
         }
     
         // Please implement other callback method of ESRCHandler interface.
-        func onNotDetectedFace() { … }
         func onAnalyzedMeasureEnv(measureEnv: ESRCMeasureEnv) { … }
         func onDetectedFacialLandmark(facialLandmark: ESRCFacialLandmark) { … }
         func onAnalyzedFacialActionUnit(facialActionUnit: ESRCFacialActionUnit) { … }
-        func onRecognizedFacialExpression(facialExpression: ESRCFacialExpression) { … }
+        func onRecognizedBasicFacialExpression(facialExpression: ESRCBasicFacialExpression) { … }
+        func onRecognizedValenceFacialExpression(facialExpression: ESRCValenceFacialExpression) { … }
 });
 ```
 
