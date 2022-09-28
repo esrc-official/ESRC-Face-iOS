@@ -6,6 +6,6 @@ framework module ESRC_Face_SDK_iOS {
 }
 
 module ESRC_Face_SDK_iOS.Swift {
-    header "ESRC_Face_SDK_iOS-Swift.h"
-    requires objc
+  header "ESRC_Face_SDK_iOS-Swift.h"
+  requires objc
 }
