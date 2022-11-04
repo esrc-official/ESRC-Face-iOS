@@ -353,7 +353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BITCODE_GENERATION_MODE = markerin;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 254;
+				CURRENT_PROJECT_VERSION = 258;
 				DEVELOPMENT_TEAM = MHUU2ZBJ99;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -365,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.4;
+				MARKETING_VERSION = 2.5.8;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esrc.face.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,7 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 254;
+				CURRENT_PROJECT_VERSION = 258;
 				DEVELOPMENT_TEAM = MHUU2ZBJ99;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -393,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.5.4;
+				MARKETING_VERSION = 2.5.8;
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.esrc.face.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
